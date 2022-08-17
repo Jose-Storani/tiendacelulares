@@ -4,7 +4,7 @@ const Main = () => {
   return (
     <main className='contenedorMain'>
         <section>
-            <h2>Bienvenides</h2>
+            <h2>Bienvenidos</h2>
         </section>
     </main>
   )
