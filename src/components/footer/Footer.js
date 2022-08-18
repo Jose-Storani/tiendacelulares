@@ -4,8 +4,8 @@ import estilo from "./footer.module.css"
 const Footer = () =>{
     return (
         <footer className={estilo.contenedorMain}>
-            <h5>Jose Storani</h5>
-            <Navbar/>
+            
+            <Navbar isHeader={false}/>
 
         </footer>
     )
