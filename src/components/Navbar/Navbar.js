@@ -1,5 +1,5 @@
 import React from 'react'
-import CartWidget from './CartWidget'
+import {CartWidget} from './CartWidget'
 import estilo from "./navbar.module.css"
 const Navbar = (props) => {
   if(props.isHeader){

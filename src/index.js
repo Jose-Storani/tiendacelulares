@@ -3,13 +3,14 @@ import React from 'react';
 
 
 import ReactDOM from 'react-dom/client'; //** ReactDOM, es la libreria que nos permite renderizar nuestra app React en el DOM */
-// import './index.css';
+
 import App from './App'; // export default
+import './index.css';
 
 // import {otra} from "./App" => export nombrado
 
 // import reportWebVitals from './reportWebVitals';
-// import "./index.css"
+
 
 
 

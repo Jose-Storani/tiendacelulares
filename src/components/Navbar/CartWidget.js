@@ -1,11 +1,13 @@
 import React from 'react'
 
-const CartWidget = () => {
+export const CartWidget = () => {
   return (
-    <div><span class="material-icons">
+    <div style={{display:"flex", alignItems: "center"}}>
+      <span class="material-icons">
     shopping_cart
-    </span></div>
+      </span>
+      <span>5</span>
+    </div>
   )
 }
 
-export default CartWidget
