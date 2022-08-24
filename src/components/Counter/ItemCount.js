@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Counter = () =>{
+const ItemCount = () =>{
     const [count, setCount] = useState(0);
 
     let maximo = 10;
@@ -26,4 +26,4 @@ const Counter = () =>{
     )
 }
 
-export default Counter
+export default ItemCount
