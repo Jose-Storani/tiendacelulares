@@ -3,13 +3,17 @@ import React, { useState } from "react";
 const Counter = () =>{
     const [count, setCount] = useState(0);
 
+    let maximo = 10;
+
     const sumar = () =>{
 
-     setCount(count + 1);
-    };
+        count < maximo ? setCount(count + 1): alert ("Maximo Stock");
+        
+    }
 
     const restar = () => {
-        setCount (count - 1);
+        
+        count > 0 ? setCount(count - 1): alert ("El valor no puede ser negativo");
     };
 
     return(
