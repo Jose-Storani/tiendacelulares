@@ -1,4 +1,5 @@
 import React from 'react'
+// import Boton from '../Boton/Boton'
 import {CartWidget} from './CartWidget'
 import estilo from "./navbar.module.css"
 const Navbar = (props) => {
@@ -21,9 +22,11 @@ const Navbar = (props) => {
               <a href="#">Contacto</a>
             </li>
 
-            <CartWidget/>
+           
   
           </ul>
+          
+          <CartWidget/>
         </nav>
     )
   }

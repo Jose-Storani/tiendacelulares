@@ -1,4 +1,5 @@
 import React from 'react'
+// import Boton from '../Boton/Boton'
 
 const Main = () => {
   return (
@@ -6,6 +7,7 @@ const Main = () => {
         <section >
             <h2 >Bienvenidos</h2>
         </section>
+        
     </main>
   )
 }

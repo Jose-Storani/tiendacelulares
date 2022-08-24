@@ -3,7 +3,7 @@ import estilo from "./footer.module.css"
 
 const Footer = () =>{
     return (
-        <footer className={estilo.contenedorMain}>
+        <footer className={estilo["contenedorMain"]}>
             
             <Navbar isHeader={false}/>
 
