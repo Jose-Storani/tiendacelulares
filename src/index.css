@@ -26,4 +26,9 @@ code {
     width: 200px;
 }
 
+.itemList{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
 ;
