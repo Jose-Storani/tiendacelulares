@@ -29,6 +29,13 @@ code {
 .itemList{
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 5px;
+}
+
+img{
+    height: 200px;
+    width: 200px
 }
 ;

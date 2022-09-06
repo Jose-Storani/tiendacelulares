@@ -6,7 +6,7 @@ export const products = [
         price: 100,
         stock: 10,
         category: "Xiaomi",
-        img: "https://buscadoresdeofertas.com.ar/images/product-zSK7fTMY8uahe6YrvTzzBYGD9HEe1UoKjSQXPE3W.webp",
+        img: "https://res.cloudinary.com/josestorani/image/upload/v1661973398/Celulares/pocox3_k0fc10.jpg",
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ export const products = [
         price: 80,
         stock: 10,
         category: "Xiaomi",
-        img: "https://buscadoresdeofertas.com.ar/images/product-zSK7fTMY8uahe6YrvTzzBYGD9HEe1UoKjSQXPE3W.webp",
+        img: "https://res.cloudinary.com/josestorani/image/upload/v1661973540/Celulares/mia2_nykd5p.jpg",
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ export const products = [
         price: 150,
         stock: 10,
         category: "Xiaomi",
-        img: "https://buscadoresdeofertas.com.ar/images/product-zSK7fTMY8uahe6YrvTzzBYGD9HEe1UoKjSQXPE3W.webp",
+        img: "https://res.cloudinary.com/josestorani/image/upload/v1661973540/Celulares/redminote_glkhyi.jpg",
     },
     {
         id: 4,
@@ -33,6 +33,17 @@ export const products = [
         price: 200,
         stock: 10,
         category: "Xiaomi",
-        img: "https://buscadoresdeofertas.com.ar/images/product-zSK7fTMY8uahe6YrvTzzBYGD9HEe1UoKjSQXPE3W.webp",
+        img: "https://res.cloudinary.com/josestorani/image/upload/v1661973558/Celulares/Xiaomi12_Blue_arodx2.png",
     }
 ]
+
+export const producto = {
+        id: 4,
+        title: "Xiaomi 12",
+        description: "",
+        price: 200,
+        stock: 10,
+        category: "Xiaomi",
+        img: "https://res.cloudinary.com/josestorani/image/upload/v1661973558/Celulares/Xiaomi12_Blue_arodx2.png"
+
+};

@@ -16,16 +16,14 @@ const ItemListContainer = (props) => {
 
     getProducts.then((data) => {
       setItems(data)
-    });
+    })
   }, 
   [])
 
   return (
     <div>
       <h2>{props.saludo}</h2>
-      
-
-    <ItemList listado = {items}/>
+      <ItemList listado = {items}/>
     </div>
     
   )

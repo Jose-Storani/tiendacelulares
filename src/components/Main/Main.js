@@ -1,4 +1,5 @@
 import React from 'react'
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
 // import Boton from '../Boton/Boton'
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
 
@@ -9,6 +10,7 @@ const Main = () => {
             <h2 >Bienvenidos</h2>
           </section>
           <ItemListContainer saludo="este es nuestro catalogo"/>
+          <ItemDetailContainer/>
         
     </main>
   )
