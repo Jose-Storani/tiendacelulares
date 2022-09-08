@@ -8,16 +8,20 @@ import ItemListContainer from '../ItemListContainer/ItemListContainer'
 const Main = () => {
   return (
     <main  >
-      <section >
-        <h2 >Bienvenidos</h2>
-      </section>
+      
+      
       <Routes>
+      
         <Route
           path='/'
-          element={<ItemListContainer saludo="este es nuestro catalogo" />}
+          element={<ItemListContainer saludo="Bienvenidos este es nuestro catalogo" />}
         />
         <Route
-          path='/detail'
+          path='/category/:categoryName'
+          element={<ItemListContainer   />}
+        />
+        <Route
+          path='/detail/:idProducto'
           element={<ItemDetailContainer />}
         />
         <Route

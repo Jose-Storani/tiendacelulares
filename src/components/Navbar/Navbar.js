@@ -8,19 +8,19 @@ const Navbar = (props) => {
     return (
       <nav className={estilo.nav}>
           <h3>
-              Cybertron
+              <Link to ="/">Cybertron</Link>
           </h3>
           <ul>
             <li>
-              <Link to ="/">Productos</Link>
+              <Link to ="/category/baja">Baja</Link>
             </li>
   
             <li>
-              <a href="#">Nosotros</a>
+              <Link to ="/category/media">Media</Link>
             </li>
   
             <li>
-              <a href="#">Contacto</a>
+              <Link to ="/category/alta">Alta</Link>
             </li>
 
            

@@ -5,7 +5,7 @@ export const products = [
         description: "",
         price: 100,
         stock: 10,
-        category: "Xiaomi",
+        category: "media",
         img: "https://res.cloudinary.com/josestorani/image/upload/v1661973398/Celulares/pocox3_k0fc10.jpg",
     },
     {
@@ -14,7 +14,7 @@ export const products = [
         description: "",
         price: 80,
         stock: 10,
-        category: "Xiaomi",
+        category: "baja",
         img: "https://res.cloudinary.com/josestorani/image/upload/v1661973540/Celulares/mia2_nykd5p.jpg",
     },
     {
@@ -23,7 +23,7 @@ export const products = [
         description: "",
         price: 150,
         stock: 10,
-        category: "Xiaomi",
+        category: "media",
         img: "https://res.cloudinary.com/josestorani/image/upload/v1661973540/Celulares/redminote_glkhyi.jpg",
     },
     {
@@ -32,7 +32,7 @@ export const products = [
         description: "",
         price: 200,
         stock: 10,
-        category: "Xiaomi",
+        category: "alta",
         img: "https://res.cloudinary.com/josestorani/image/upload/v1661973558/Celulares/Xiaomi12_Blue_arodx2.png",
     }
 ]
@@ -43,7 +43,7 @@ export const producto = {
         description: "",
         price: 200,
         stock: 10,
-        category: "Xiaomi",
+        category: "alta",
         img: "https://res.cloudinary.com/josestorani/image/upload/v1661973558/Celulares/Xiaomi12_Blue_arodx2.png"
 
 };
