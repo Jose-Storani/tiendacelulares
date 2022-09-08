@@ -9,7 +9,7 @@ const ItemListContainer = (props) => {
     const getProducts = new Promise((res, rej) => {
       setTimeout(() => {
         res(products);
-      }, 2000
+      }, 1000
       )
     }
     );

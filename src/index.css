@@ -28,7 +28,7 @@ code {
 
 .itemList{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 5px;

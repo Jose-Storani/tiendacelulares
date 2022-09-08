@@ -2,6 +2,7 @@ import React from 'react'
 // import Boton from '../Boton/Boton'
 import {CartWidget} from './CartWidget'
 import estilo from "./navbar.module.css"
+import { Link } from 'react-router-dom'
 const Navbar = (props) => {
   if(props.isHeader){
     return (
@@ -11,7 +12,7 @@ const Navbar = (props) => {
           </h3>
           <ul>
             <li>
-              <a href="#">Productos</a>
+              <Link to ="/">Productos</Link>
             </li>
   
             <li>
@@ -25,8 +26,8 @@ const Navbar = (props) => {
            
   
           </ul>
+          <Link to='/cart'><CartWidget/></Link>
           
-          <CartWidget/>
         </nav>
     )
   }
