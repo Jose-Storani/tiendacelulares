@@ -5,9 +5,10 @@ import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
     const [productoUnico, setProducto] = useState({});
-    const { idProducto } = useParams();
-    const idProductoNumerico = Number(idProducto);
-
+    const [isLoading, setIsLoading] = useState(true);
+    const { id } = useParams();
+    const idProductoNumerico = Number(id);
+    
     useEffect(() => {
         const getProducto = new Promise((res, rej) => {
             const productoEncontrado = products.find((prod) => prod.id === idProductoNumerico)
@@ -21,14 +22,25 @@ const ItemDetailContainer = () => {
         getProducto.then((data) => {
             setProducto(data)
         })
+        .catch((error) => {
+            console.log(error);
+        }).finally(() =>{
+            setIsLoading(false)
+        })
     },
         [productoUnico])
 
     return (
         <div>
+        {
+            isLoading ? (<h3>Cargando productos</h3>) :
             <ItemDetail producto={productoUnico} />
-
+        }
         </div>
+        
+            
+
+        
     )
 
 }

@@ -17,12 +17,12 @@ const Main = () => {
           element={<ItemListContainer saludo="Bienvenidos este es nuestro catalogo" />}
         />
         <Route
-          path='/category/:categoryName'
-          element={<ItemListContainer   />}
+          path='/category/:id'
+          element={<ItemListContainer/>}
         />
         <Route
-          path='/detail/:idProducto'
-          element={<ItemDetailContainer />}
+          path='/detail/:id'
+          element={<ItemDetailContainer/>}
         />
         <Route
           path='/cart'

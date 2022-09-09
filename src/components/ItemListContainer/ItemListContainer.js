@@ -5,38 +5,58 @@ import { useParams } from 'react-router-dom';
 
 const ItemListContainer = (props) => {
 	const [items, setItems] = useState([]);
+	const [isLoading, setIsLoading] = useState(Boolean);
 
-	const { categoryName } = useParams();
+	const { id } = useParams();
+	// console.log(isLoading)
+	
 
 
 	useEffect(() => {
+		setIsLoading(true)
 		const getProducts =
 			new Promise((res, rej) => {
 				const filtrados = products.filter((prod) =>
-					prod.category === categoryName
+					prod.category === id
 				);
 
 				setTimeout(() => {
-					res(categoryName ? filtrados : products);
+					res(id ? filtrados : products);
 				}, 1000
 				)
 			}
 			);
 		getProducts.then((data) => {
-			setItems(data)
-		});
+			setItems(data);
+		})
+			.catch((error) => {
+				console.log(error);
+			}).finally(() => {
+				setIsLoading(false)
+				
+			});
+		
 	},
-		[categoryName])
+		[id])
 
 
 
 
 	return (
 		<div>
-			
-			<h2>{props.saludo}</h2>
-			<ItemList listado={items} />
+			{
+				isLoading ? (<h3>Cargando productos</h3>) :
+					<>
+						<h2>{props.saludo}</h2>
+						<ItemList listado={items} />
+					</>
+			}
+
+
+
+
 		</div>
+
 
 	)
 		;
