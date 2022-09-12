@@ -13,9 +13,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header/>
-      <Main/>
-      <ItemCount stock = {10} inicial = {1} onAdd ={() => console.log("Hola")}/>
-    
+      <Main/>       
       <Footer/>
     </BrowserRouter>
   );
