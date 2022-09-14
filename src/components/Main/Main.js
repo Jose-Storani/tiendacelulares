@@ -14,7 +14,8 @@ const Main = () => {
       
         <Route
           path='/'
-          element={<ItemListContainer saludo="Bienvenidos este es nuestro catalogo" />}
+          element={<ItemListContainer saludo="Bienvenidos este es nuestro catalogo" 
+          />}
         />
         <Route
           path='/category/:id'

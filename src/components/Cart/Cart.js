@@ -1,10 +1,14 @@
-import React from 'react'
-import Form from '../Form/Form'
+import React, { useContext } from 'react'
+import { CartContext } from '../../context/CartContext';
+//import Form from '../Form/Form'
 
 const Cart = () => {
+  const {clearCart} = useContext(CartContext);
+  
   return (
     <div>
-      <Form />
+      <button onClick={clearCart}>Borrar Carrito</button>
+      {/* <Form /> */}
 
     </div>
   )

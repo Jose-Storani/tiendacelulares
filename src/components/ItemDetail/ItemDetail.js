@@ -1,13 +1,21 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from '../Counter/ItemCount'
+import {CartContext} from "../../context/CartContext"
 
 const ItemDetail = ({ producto }) => {
 	const [cantidad, setCantidad] = useState(0)
+	const {cart, addToCart} = React.useContext(CartContext);
 	const onAdd = (arg) => {
 		setCantidad(arg)
+		addToCart(producto, arg); //*Con esta función estamos mandando a mi contexto, la informacion sobre el producto y la cantidad.
+		
+
 
 	}
+
+	console.log(cart)
+	
 	return (
 
 		<div style={{ borderColor: "green", borderStyle: "solid" }}>
