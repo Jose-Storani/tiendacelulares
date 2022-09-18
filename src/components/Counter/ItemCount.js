@@ -1,7 +1,12 @@
-import React, {  useState } from "react";
+import React, {  useEffect, useState } from "react";
 
-const ItemCount = ({stock, inicial, onAdd}) =>{
+const ItemCount = ({stock, inicial = 1, onAdd}) =>{
     const [count, setCount] = useState(inicial);
+
+    useEffect(()=>{
+        setCount(inicial);
+
+    },[inicial])
     const sumar = () =>{
 
         count <stock ? setCount(count + 1): alert ("Maximo Stock");

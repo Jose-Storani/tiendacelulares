@@ -25,10 +25,10 @@ code {
     margin: auto;
     border: solid blue 2px;
     width: 200px;
-    
+
 }
 
-.itemList{
+.itemList {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -36,13 +36,15 @@ code {
     padding: 5px;
 }
 
-img{
+img {
     height: 200px;
     width: 200px
 }
 
-form{
+form {
     display: flex;
     justify-content: center
 }
+
 ;
+

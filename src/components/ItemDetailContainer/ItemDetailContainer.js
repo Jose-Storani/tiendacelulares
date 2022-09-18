@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
             const productoEncontrado = products.find((prod) => prod.id === idProductoNumerico)
             setTimeout(() => {
                 res(productoEncontrado);
-            }, 500
+            }, 1000
             )
         }
         );
@@ -33,7 +33,7 @@ const ItemDetailContainer = () => {
     return (
         <div>
         {
-            isLoading ? (<h3>Cargando productos</h3>) :
+            isLoading ? <h3>Cargando productos</h3> :
             <ItemDetail producto={productoUnico} />
         }
         </div>

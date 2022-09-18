@@ -5,16 +5,14 @@ import {CartContext} from "../../context/CartContext"
 
 const ItemDetail = ({ producto }) => {
 	const [cantidad, setCantidad] = useState(0)
-	const {cart, addToCart} = React.useContext(CartContext);
+	const { addToCart, encontrarCantidadProducto } = React.useContext(CartContext);
 	const onAdd = (arg) => {
 		setCantidad(arg)
 		addToCart(producto, arg); //*Con esta función estamos mandando a mi contexto, la informacion sobre el producto y la cantidad.
-		
-
-
 	}
 
-	console.log(cart)
+	const quantity = encontrarCantidadProducto(producto.id)
+	
 	
 	return (
 
@@ -26,7 +24,7 @@ const ItemDetail = ({ producto }) => {
 			
 			{
 				cantidad === 0 ? (
-					<ItemCount stock={producto.stock} inicial={0} onAdd={onAdd} />) : 
+					<ItemCount stock={producto.stock} inicial={quantity} onAdd={onAdd} />) : 
 					(
 					<>
 						<h5>La cantidad elegida es : {cantidad}</h5>

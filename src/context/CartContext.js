@@ -36,7 +36,7 @@ const CartProvider = ({children}) => {
             if (prod.id === producto.id) {
                 const productoActualizado = {
                     ...prod,
-                    cantidadProducto: prod.cantidadProducto + cantidadAgregada
+                    cantidadProducto: cantidadAgregada
                 }
                 return productoActualizado
                 
@@ -55,12 +55,43 @@ const CartProvider = ({children}) => {
     
 //* eliminar un solo producto
 
+const eliminarProducto = (id) =>{
+    const carritoFiltrado = cart.filter((prod) => prod.id !== id)
+    setCart(carritoFiltrado)
+
+}
+
+//* Cantidad del producto en el carrito.
+
+const encontrarCantidadProducto = (id) =>{
+    const producto = cart.find ((prod) => prod.id === id);
+        return producto?.cantidadProducto
+        // optional chaining
+    }
+
+
+
 //* contar cuantos productos hay y mostrarlo en el cartwidget
+    const totalUnidades = () =>{
+        let acumulador =0 ;
+        cart.forEach((prod) => {
+            acumulador+= prod.cantidadProducto
+        })
+        return acumulador;
+    }
+
 
 //*Calcular el total del precio a pagar
+const precioTotal = () =>{
+    let acumulador = 0;
+    cart.forEach((prod) => {
+        acumulador += (prod.price * prod.cantidadProducto)
+    })
+    return acumulador;
+}
 
   return (
-        <CartContext.Provider value={{cart, addToCart, clearCart}}>
+        <CartContext.Provider value={{cart, addToCart, clearCart, eliminarProducto, encontrarCantidadProducto, precioTotal, totalUnidades}}>
             {children}
             
 
