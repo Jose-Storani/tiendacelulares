@@ -32,7 +32,7 @@ const ItemDetailContainer = () => {
 
         
     },
-        [productoUnico])
+        [id])
 
     return (
         <div>
