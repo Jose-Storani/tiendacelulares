@@ -11,7 +11,7 @@ const CartProvider = ({children}) => {
     
     
     const addToCart = (producto, cantidadProducto ) =>{
-        //*en esta funcion, recibo como argumento, los valores enviados por ItemDetail, que son el producto y la cantida del producto seleccionado.
+        //*esta funcion, recibo como argumento, los valores enviados por ItemDetail, que son el producto y la cantidad del producto seleccionado.
         //* Hacemos un spreed de PRODUCTO, para dejar "sueltos" todos los datos y poder agregar la cantidad, pero siempre envolver en objeto, array o algo.
         
         if (isInCart(producto.id)) {
