@@ -7,15 +7,11 @@ import ItemListContainer from '../ItemListContainer/ItemListContainer'
 
 const Main = () => {
   return (
-    <main  >
-      
-      
-      <Routes>
-      
+    <main>           
+      <Routes>     
         <Route
           path='/'
-          element={<ItemListContainer saludo="Bienvenidos este es nuestro catalogo" 
-          />}
+          element={<ItemListContainer/>}
         />
         <Route
           path='/category/:id'
@@ -30,7 +26,6 @@ const Main = () => {
           element={<Cart />}
         />
       </Routes>
-
     </main>
   )
 }

@@ -5,17 +5,26 @@ import Form from '../Form/Form'
 
 const Cart = () => {
 	const [idCompra, setIdCompra] = useState("");
+	const [isLoadingOrder, setIsLoadingOrder] = useState(false);
 	const { cart, clearCart, eliminarProducto, precioTotal } = useContext(CartContext);
 	const total = precioTotal();
 
-	const handleId = (id) => {
-	setIdCompra(id)};
+	const handleOrder = () =>{
+		setIsLoadingOrder(true)
+	}
 
-	if(idCompra){ 
-		return <h1>Gracias por tu compra tu id es {idCompra}</h1>
+	const handleId = (id) => {
+		setIdCompra(id)
+	};
+
+	if (idCompra) {
+		return <h1>Gracias por tu compra, tu id es {idCompra}</h1>
 	}
 
 	return (
+		<>
+		{isLoadingOrder ? <h3>Tu pedido esta siendo procesado</h3>
+		: 
 		<div style={{
 			display: "flex",
 			flexDirection: "column",
@@ -37,19 +46,16 @@ const Cart = () => {
 						<button style={{ width: "5rem" }} onClick={() => eliminarProducto(prod.id)}>Eliminar producto</button>
 					</div>
 				)
-
 				)}
-
-
-				<button style={{ width: "5rem", border: "1px green solid" }} onClick={clearCart}>Borrar Carrito</button>
+				<button onClick={clearCart}>Borrar Carrito</button>
 				<h3>Total: ${total}</h3>
-				<Form total={total} handleId={handleId}/> 
-				
-			</> : <h3>Tu carrito esta vacio, has <Link to = "/"><strong>click aqui </strong></Link>para empezar a comprar</h3> }
-
-
+				<Form total={total} handleId={handleId} handleOrder={handleOrder} />
+			</> : <h3>Tu carrito esta vacio, has <Link to="/"><strong>click aqui </strong></Link>para empezar a comprar</h3>}
 		</div>
+		}
 
+			
+		</>
 	)
 }
 

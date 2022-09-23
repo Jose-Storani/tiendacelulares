@@ -13,12 +13,12 @@ const ItemCount = ({stock, inicial = 1, onAdd}) =>{
         
     }
     const restar = () => {       
-        count > inicial && setCount(count - 1)
+        count > 0 && setCount(count - 1)
     };
     return(
-        <div style={{border:"solid blue 2px"}} >
-            <button onClick={restar} disabled={count === inicial} style={{width:"50px"}}> - </button>
-            <p>Count: {count} </p>
+        <div style={{display:"flex", justifyContent:"center"}} >
+            <button onClick={restar} disabled={count === 1} style={{width:"50px"}}> - </button>
+            <p>Cantidad: {count} </p>
             <button onClick={sumar} style={{width:"50px"}}> + </button>
             <button  onClick={()=>onAdd(count)} >Agregar al carrito</button>
 

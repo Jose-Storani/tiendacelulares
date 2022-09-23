@@ -15,4 +15,4 @@ const firebaseConfig = {
 
 
 const app = initializeApp(firebaseConfig);
-export const dataBase = getFirestore(app); //en esta constante tengo acceso a todos mis datos que tenga en firestore y firestore accede a tods las configs que tenga en app.
+export const dataBase = getFirestore(app); 
