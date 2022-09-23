@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tiendacelulares/static/css/main.a7ac0196.css",
+    "main.js": "/tiendacelulares/static/js/main.c8f44670.js",
+    "index.html": "/tiendacelulares/index.html",
+    "main.a7ac0196.css.map": "/tiendacelulares/static/css/main.a7ac0196.css.map",
+    "main.c8f44670.js.map": "/tiendacelulares/static/js/main.c8f44670.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7ac0196.css",
+    "static/js/main.c8f44670.js"
+  ]
+}
