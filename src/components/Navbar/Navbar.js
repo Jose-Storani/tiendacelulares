@@ -6,7 +6,7 @@ const Navbar = (props) => {
 		return (
 			<nav>
 				<h3 className='titulo'>
-					<NavLink to="/" style={{ textDecoration: "none" }}>Cybertron</NavLink>
+					<NavLink to="/tiendacelulares" style={{ textDecoration: "none" }}>Cybertron</NavLink>
 				</h3>
 				<ul>
 					<li>
@@ -20,7 +20,7 @@ const Navbar = (props) => {
 					<li>
 						<NavLink to="/category/alta">Gama Alta</NavLink>
 					</li>
-					
+
 				</ul>
 				<NavLink to="/cart" style={{ textDecoration: "none" }}>
 					<CartWidget />
@@ -50,7 +50,6 @@ const Navbar = (props) => {
 				</ul>
 			</nav>
 		)
-
 	}
 }
 

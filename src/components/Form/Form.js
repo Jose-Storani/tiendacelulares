@@ -4,16 +4,14 @@ import React, { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { dataBase } from "../../firebaseconfig"
 
-
-
-const Form = ({total, handleId, handleOrder}) => {  
-    const {cart, clearCart} = useContext(CartContext); 
+const Form = ({ total, handleId, handleOrder }) => {
+    const { cart, clearCart } = useContext(CartContext);
     const [nombre, setNombre] = useState("");
     const [apellido, setApellido] = useState("");
     const [email, setEmail] = useState("");
     const [direccion, setDireccion] = useState("");
     const [telefono, setTelefono] = useState("");
-    
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -35,12 +33,12 @@ const Form = ({total, handleId, handleOrder}) => {
 
         addDoc(orderCollection, order).then((res) => {
             handleId(res.id);
-            clearCart();    
+            clearCart();
         })
-        .catch((error) => {
-            console.log(error)
-        })
-        ;      
+            .catch((error) => {
+                console.log(error)
+            })
+            ;
     };
 
     const handleChangeNombre = (e) => {
@@ -62,17 +60,17 @@ const Form = ({total, handleId, handleOrder}) => {
     const handleChangeTelefono = (e) => {
         setTelefono(e.target.value)
     };
-    
+
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder='Nombre...' name='nombre' value={nombre} onChange={handleChangeNombre} >
+                <input type="text" placeholder='Nombre...' name='nombre' required value={nombre} onChange={handleChangeNombre} >
                 </input>
-                <input type="text" placeholder='Apellido...' name='apellido' value={apellido} onChange={handleChangeApellido} ></input>
-                <input type="email" placeholder='Email...' name='email' value={email} onChange={handleChangeEmail} ></input>
-                <input type="text" placeholder='Direccion...' name='direccion' value={direccion} onChange={handleChangeDireccion} ></input>
-                <input type="tel" placeholder='Telefono...' name='telefono' value={telefono} onChange={handleChangeTelefono} ></input>
-                <button  >Enviar</button>              
+                <input type="text" placeholder='Apellido...' name='apellido' required value={apellido} onChange={handleChangeApellido} ></input>
+                <input type="email" placeholder='Email...' name='email' required value={email} onChange={handleChangeEmail} ></input>
+                <input type="text" placeholder='Direccion...' name='direccion' required value={direccion} onChange={handleChangeDireccion} ></input>
+                <input type="tel" placeholder='Telefono...' name='telefono' required value={telefono} onChange={handleChangeTelefono} ></input>
+                <button  >Enviar</button>
             </form>
         </div>
     );

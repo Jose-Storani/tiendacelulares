@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { products } from '../../mocks/products'
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 import { dataBase } from '../../firebaseconfig';
@@ -9,7 +8,7 @@ const ItemDetailContainer = () => {
     const [productoUnico, setProducto] = useState({});
     const [isLoading, setIsLoading] = useState(Boolean);
     const { id } = useParams();
-    // const idProductoNumerico = id;
+    
     
     useEffect(() => {
         setIsLoading(true)
@@ -28,9 +27,6 @@ const ItemDetailContainer = () => {
         .finally(() =>{
             setIsLoading(false)
         })
-        
-
-        
     },
         [id])
 
@@ -41,32 +37,9 @@ const ItemDetailContainer = () => {
             <ItemDetail producto={productoUnico} />
         }
         </div>
-        
-            
-
-        
     )
 
 }
 
 
-
 export default ItemDetailContainer
-
-// const getProducto = new Promise((res, rej) => {
-//     const productoEncontrado = products.find((prod) => prod.id === idProductoNumerico)
-//     setTimeout(() => {
-//         res(productoEncontrado);
-//     }, 1000
-//     )
-// }
-// );
-
-// getProducto.then((data) => {
-//     setProducto(data)
-// })
-// .catch((error) => {
-//     console.log(error);
-// }).finally(() =>{
-//     setIsLoading(false)
-// })

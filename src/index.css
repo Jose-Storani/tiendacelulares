@@ -10,7 +10,7 @@ body {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    
+
 }
 
 code {
@@ -24,12 +24,14 @@ code {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 5px;
-    
+
 }
 
+
+
 img {
-    height: 200px;
-    width: 200px
+    height: 300px;
+    width: 300px
 }
 
 form {
@@ -37,14 +39,14 @@ form {
     justify-content: center
 }
 
-header{
+header {
     background-color: rgb(189, 203, 189);
     border: black 2px solid;
     padding: 20px;
-    margin: 5px; 
+    margin: 5px;
 }
 
-footer{
+footer {
     background-color: rgb(165, 165, 186);
     border: black 2px solid;
     padding: 20px;
@@ -52,35 +54,34 @@ footer{
 }
 
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     padding: 10px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    
+
 }
 
 nav ul li {
     margin: 0px 10px;
-    
+
 }
 
 nav ul li a {
-    text-decoration:none;
+    text-decoration: none;
 
 }
 
-li a:hover{
-    
+li a:hover {
+
     color: white;
-} 
+}
 
 
 
-;
 
